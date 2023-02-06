@@ -207,13 +207,13 @@ input[type="radio"] {
 .counting {
     background-color: black;
     color: white;
-    width: 2rem;
-    height: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 6px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    line-height: 2rem;
+    line-height: 1.25rem;
     margin-right: 0.5rem;
     font-weight: bolder;
     font-size: 1rem;
@@ -232,3 +232,10 @@ input[type="radio"] {
     width: 600px;
     height: 450px;
 }
+
+.eye{
+    color: white;
+    width: 1px;
+    height: 1px;
+}
+

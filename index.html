@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular-route.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body ng-controller="myController">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="counting">
+            <script>document.write(localStorage.getItem("visits"));</script>
+        </div>
+        <a class="navbar-brand" href="#">My Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- nút tìm kiếm -->
+                <li class="search">
+                    <input type="text" ng-model="searchTerm" placeholder="search...">
+                </li>
+                <!-- nút home -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/">
+                        <img src="https://salt.tikicdn.com/ts/upload/32/56/db/d919a4fea46f498b5f4708986d82009d.png"
+                            alt="header_menu_item_home" class="shop-img" class="home-icon">Home
+                    </a>
+                </li>
+                <!-- nút shop -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/shop">
+                        <img src="https://salt.tikicdn.com/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png"
+                            width="32" height="32" alt="shop"
+                            srcset="https://salt.tikicdn.com/cache/100x100/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png 1x, https://salt.tikicdn.com/cache/100x100/ts/category/92/b5/c0/3ffdb7dbfafd5f8330783e1df20747f6.png 2x"
+                            class="shop-img"> shop
+                    </a>
+                </li>
+                <!-- nút cart -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#!/cart">
+                        <img class="cart-icon"
+                            src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png"
+                            alt="header_header_img_Cart"> Cart
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- main content -->
+    <section>
+        <div ng-view>
+        </div>
+    </section>
+
+    <br>
+    <footer id="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.268022441945!2d106.6796496141166!3d10.790772461881096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528d35939c66f%3A0xe52e3ed732b15272!2zVHLGsOG7nW5nIENhbyDEkOG6s25nIEZQVCBQb2x5dGVjaG5pYyAoQ1MxKQ!5e0!3m2!1svi!2s!4v1675668147733!5m2!1svi!2s"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

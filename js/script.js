@@ -34,6 +34,7 @@ app.controller('myController', function ($scope) {
         $scope.cart.push({
             name: product.name,
             price: product.price,
+            image: product.image,
             quantity: quantity
         });
     };
@@ -160,11 +161,12 @@ const updateTicker = () => {
     let date = new Date();
     let dateString = date.toLocaleDateString();
     let timeString = date.toLocaleTimeString();
-    navigator.geolocation.getCurrentPosition((position) => {
-        let latitude = position.coords.latitude;
-        let longitude = position.coords.longitude;
-        ticker.innerHTML = `${dateString}, ${timeString} <br>391a Nam Kỳ Khởi Nghĩa, phường 14, Quận 3`;
-    });
+    ticker.innerHTML = `${dateString}, ${timeString} <br>391a Nam Kỳ Khởi Nghĩa, phường 14, Quận 3`;
+    // navigator.geolocation.getCurrentPosition((position) => {
+    //     let latitude = position.coords.latitude;
+    //     let longitude = position.coords.longitude;
+    //     ticker.innerHTML = `${dateString}, ${timeString} <br>391a Nam Kỳ Khởi Nghĩa, phường 14, Quận 3`;
+    // });
 };
 
 const button = document.createElement('button');
@@ -194,19 +196,21 @@ button.addEventListener('click', () => {
         let date = new Date();
         let dateString = date.toLocaleDateString();
         let timeString = date.toLocaleTimeString();
-        navigator.geolocation.getCurrentPosition((position) => {
-            let latitude = position.coords.latitude;
-            let longitude = position.coords.longitude;
+        button.style.opacity = 0;
+        setTimeout(() => {
             button.innerHTML = `${dateString}, ${timeString} <br>391a Nam Kỳ Khởi Nghĩa, phường 14, Quận 3`;
-        });
+            button.style.transition = 'all 0.5s ease-in';
+            button.style.opacity = 1;
+        }, 500);
         isInfoDisplayed = true;
     } else {
-        button.innerHTML = 'Show Info';
+        button.style.opacity = 0;
+        setTimeout(() => {
+            button.innerHTML = 'Show Info';
+            button.style.transition = 'all 0.5s ease-out';
+            button.style.opacity = 0.6;
+        }, 500);
         isInfoDisplayed = false;
     }
 });
-
-
-
-
 

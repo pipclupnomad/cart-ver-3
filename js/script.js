@@ -17,7 +17,12 @@ app.controller("MainController", function ($scope, $http) {
     $http.get('product.json').then(function (response) {
         $scope.products = response.data.products;
     });
+    // modal
+    $scope.showProduct = function (product) {
+        $scope.selectedProduct = product;
+    };
 });
+
 
 
 app.controller('myController', function ($scope) {
@@ -62,6 +67,14 @@ app.controller('myController', function ($scope) {
         var index = $scope.cart.indexOf(item);
         $scope.cart.splice(index, 1);
     };
+
+    $scope.submitLogin = function () {
+        alert("tài khoản không tồn tại");
+    };
+
+    $scope.registerModal = function () {
+        alert("Đăng ký thành công!");
+    }
 
 });
 
@@ -213,4 +226,22 @@ button.addEventListener('click', () => {
         isInfoDisplayed = false;
     }
 });
+
+//nút top
+var mybutton = document.getElementById("myBtn");
+window.onscroll = function () { scrollFunction() };
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+
 

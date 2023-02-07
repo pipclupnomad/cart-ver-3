@@ -1,0 +1,28 @@
+{
+    "products" : [
+        { "name": "Watch", "image": "images/watch.png", "price": 25, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân"},
+        { "name": "Apple Watch", "image": "images/apw.jpg", "price": 20, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Laptop", "image": "images/laptop.jpg", "price": 100, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "samsung galaxy S21", "image": "images/s21.jpg", "price": 200, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "điện thoại Bphone", "image": "images/bphone.jpg", "price": 50, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Tivi Samsung 70 inch", "image": "images/tvss1.jpg", "price": 450, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "tai nghe bluetooth", "image": "images/bluetooth-ear.jpg", "price": 500, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "tai nghe bluetooth chống nước", "image": "images/bluetooth-ear1.jpg", "price": 510, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "tay cầm liên quân", "image": "images/tay-cam.jpg", "price": 8, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Chuột Không Dây HXSJ", "image": "images/mouse1.jpg", "price": 10, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Bàn phím Apple MK2A3", "image": "images/keyboard.jpg", "price": 105, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Asus gaming laptop", "image": "images/lap-gaming.png", "price": 2000, "quantity": 1, "type": "tech", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "bình nước", "image": "images/nuoc.jpg", "price": 2, "quantity": 1, "type": "other", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Whey Gold Standard", "image": "images/whey.jpg", "price": 50, "quantity": 1, "type": "food", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "BCAA", "image": "images/bcaa.jpg", "price": 27, "quantity": 1, "type": "food", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "quần jean nam FIT", "image": "images/jean1.jpg", "price": 7.5, "quantity": 1, "type": "clothe", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "T-shirt nam", "image": "images/shirt.webp", "price": 7, "quantity": 1, "type": "clothe", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Simpson T-shirt", "image": "images/shirt2.jpg", "price": 6, "quantity": 1, "type": "clothe", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Creatine Monohydrate", "image": "images/creatine.webp", "price": 45, "quantity": 1, "type": "food", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Vita Multivitamin", "image": "images/vitamin.webp", "price": 36, "quantity": 1, "type": "food", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" },
+        { "name": "Vitamin D Ostrovit", "image": "images/vitamind.jpg", "price": 25, "quantity": 1, "type": "food", "use": "Hello, my name is Trần Thiện Nhân","des":"Hello, my name is Trần Thiện Nhân" }
+      ]  
+}
+  
+  
+  

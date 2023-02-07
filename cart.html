@@ -1,0 +1,55 @@
+<h2 class="text-center mt-3 mb-3">YOUR PRODUCTS</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in cart">
+      <td>
+        <img src="{{item.image}}" alt="" style="width:4rem; height:4rem;">
+        {{item.name}}
+      </td>
+      <td>
+        <quantity-buttons quantity="item.quantity"></quantity-buttons>
+      </td>
+      <td>${{item.price}}</td>
+      <td>${{item.quantity * item.price}}</td>
+      <td>
+        <button class="btn btn-danger btn-sm" ng-click="removeItem(item)">X</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p class="text-left font-weight-bold mt-3" style="margin-left:1.5rem;">
+  <span style="color:red;">Total: ${{getTotal()}} = {{(getTotal()*24000).toLocaleString()}} VNĐ</span><br>
+  <span>discount <span style="color:blueviolet;">20%</span> => ${{getTotal()*(1-20/100) | number:2}} =
+    {{(getTotal()*24000*(1-20/100)).toLocaleString()}} VNĐ</span><br>
+  <span>phí ship <span style="color:blueviolet;">2%</span> => ${{getTotal()*(1-20/100)*(1+2/100) | number:2}} =
+    {{(getTotal()*24000*(1-20/100)*(1+2/100)).toLocaleString()}} VNĐ</span><br>
+  <span style="color: red; background-color: yellow;">==> Tổng số tiền phải trả là:
+    ${{getTotal()*(1-20/100)*(1+2/100)*(1+1/100) | number:2}} =
+    {{(getTotal()*24000*(1-20/100)*(1+2/100)*(1+1/100)).toLocaleString()}} VNĐ</span><br>
+</p>
+<div class="form-group" style="margin-left:1.5rem;">
+  <label for="" style="font-weight:bolder;">các lựa chọn: </label><br>
+  <form class="form-group form-check" name="formSV">
+    <input type="radio" name="payment_option" id="opt1"> mua trước trả sau<br>
+    <input type="radio" name="payment_option" id="opt2"> by cash<br>
+    <input type="radio" name="payment_option" id="opt3"> by ATM card<br>
+    <input type="radio" name="payment_option" id="opt4"> by Paypal/ Master/ Visa card <br>
+</div>
+<div class="row">
+  <div class="col-4"></div>
+  <div class="col-6">
+    <button type="submit" class="btn btn-primary float-left mt-2" style="width:50%; height:50px; font-size: 1.5rem"
+      class="buy" ng-click="buy()">Buy</button>
+  </div>
+  <div class="col-2"></div>
+</div>
+</form>

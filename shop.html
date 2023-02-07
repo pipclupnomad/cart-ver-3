@@ -29,7 +29,49 @@
             <quantity-buttons quantity="product.quantity"></quantity-buttons>
         </div>
         <div class="d-flex mt-3">
-            <button class="btn btn-primary" ng-click="addToCart(product, product.quantity)">add to cart</button>
+            <button class="btn btn-primary" ng-click="addToCart(product, product.quantity)">add to cart</button><br>
+            <button type="button" class="btn btn-info" style="margin-left:0.5rem;" ng-click="showProduct(product)"
+                data-toggle="modal" data-target="#productModal">
+                View Product
+            </button>
+
+            <!-- MODAL -->
+            <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-labelledby="productModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="img-modal col-6">
+                                <img ng-src="{{selectedProduct.image}}" />
+                            </div>
+                            <div class="des-modal col-6">
+                                <h3 class="modal-title" id="productModalLabel">{{selectedProduct.name}}</h3>
+                                <label class="label-modal">Price:</label>
+                                {{selectedProduct.price | currency}} <br>
+                                <label class="label-modal">Quantity:</label>
+                                {{selectedProduct.quantity}} <br>
+                                <label class="label-modal">Type:</label>
+                                {{selectedProduct.type}} <br>
+                                <label class="label-modal">Use:</label>
+                                {{selectedProduct.use}} <br>
+                                <label class="label-modal">Description:</label>
+                                {{selectedProduct.des}} <br>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary" ng-click="addToCart(selectedProduct, selectedProduct.quantity)">add to
+                                cart</button><br>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END MODAL -->
         </div>
     </div>
 </div>
